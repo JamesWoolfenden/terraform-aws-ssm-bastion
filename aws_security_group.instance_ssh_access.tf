@@ -18,7 +18,5 @@ resource "aws_security_group" "instance_ssh_access" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
-  tags = "${merge(var.common_tags,
-    map("Name", "${var.ssm_tag_name}")
-  )}"
+  tags = "${var.common_tags}"
 }
