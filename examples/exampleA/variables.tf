@@ -1,11 +1,7 @@
-variable "region" {
-  type        = "string"
-  description = "The region to create your registry in."
-}
 
 variable "name" {
   type        = "string"
-  description = "The name of the registry"
+  description = "The name of the bastion server"
 }
 
 variable "common_tags" {
@@ -17,17 +13,11 @@ variable "environment" {
   default = "dev"
 }
 
-variable "key_names" {
-  type        = "list"
-  description = "A list of key names"
+
+variable "instance_type" {
+  
 }
 
-variable "ssm_tag_name" {
-  type        = "string"
-  description = ""
-}
-
-variable "allowed_ips" {
-  type        = "string"
-  description = ""
+variable "ssm_standard_role" {
+  
 }
