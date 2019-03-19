@@ -17,3 +17,8 @@ variable "environment" {
   type        = "string"
   description = "The environment name"
 }
+
+variable "name" {
+  type        = "string"
+  description = "Name of the ec2 instance"
+}

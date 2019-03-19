@@ -1,4 +1,3 @@
-
 variable "name" {
   type        = "string"
   description = "The name of the bastion server"
@@ -13,11 +12,6 @@ variable "environment" {
   default = "dev"
 }
 
+variable "instance_type" {}
 
-variable "instance_type" {
-  
-}
-
-variable "ssm_standard_role" {
-  
-}
+variable "ssm_standard_role" {}

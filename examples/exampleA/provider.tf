@@ -4,11 +4,11 @@ provider "aws" {
 }
 
 provider "tls" {
-  version="1.2"
+  version = "1.2"
 }
 
 provider "external" {
- version = "1.0"
+  version = "1.0"
 }
 
 provider "http" {
@@ -16,5 +16,5 @@ provider "http" {
 }
 
 provider "local" {
-  version="1.1"
+  version = "1.1"
 }

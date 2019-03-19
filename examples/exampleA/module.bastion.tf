@@ -7,4 +7,5 @@ module "bastion" {
   ssm_standard_role = "${var.ssm_standard_role}"
   subnet_id         = "${element(data.aws_subnet_ids.subnets.ids, 0)}"
   environment       = "${var.environment}"
+  name              = "${var.name}"
 }

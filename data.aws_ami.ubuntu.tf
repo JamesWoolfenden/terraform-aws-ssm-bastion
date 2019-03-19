@@ -1,7 +1,7 @@
 # Ubuntu Server 16.04
 # Ubuntu Server 18.04
 # both ship with the amazon ssm agent preinstalled.
- 
+
 data "aws_ami" "ubuntu" {
   most_recent = true
 

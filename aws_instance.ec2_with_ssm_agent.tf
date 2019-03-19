@@ -1,4 +1,5 @@
 resource "aws_instance" "ec2_with_ssm_agent" {
+  names                       = "${var.name}"
   ami                         = "${data.aws_ami.ubuntu.image_id}"
   iam_instance_profile        = "${aws_iam_instance_profile.ssm_poc_instance_profile.name}"
   instance_type               = "${var.instance_type}"
