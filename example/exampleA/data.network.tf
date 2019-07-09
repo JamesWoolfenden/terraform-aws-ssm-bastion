@@ -6,6 +6,10 @@ data "aws_vpcs" "vpc" {
 }
 
 data "aws_subnet_ids" "subnets" {
+  tags = {
+    Name = "awwe-subn-devtest-h-web-001-1b"
+  }
+
   vpc_id = "${element(data.aws_vpcs.vpc.ids, 0)}"
 }
 

@@ -19,4 +19,4 @@ tmp
 lambda
 *~HEAD
 *backup
-id_rsa
+id_rsa*

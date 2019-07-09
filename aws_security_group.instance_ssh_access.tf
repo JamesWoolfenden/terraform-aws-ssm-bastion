@@ -1,7 +1,7 @@
 # Instance Security group
 resource "aws_security_group" "instance_ssh_access" {
   description = "Allow SSH to instance with ssm agent"
-  vpc_id      = "${var.vpc_id}"
+  vpc_id      = var.vpc_id
 
   ingress {
     from_port   = 22
@@ -18,5 +18,5 @@ resource "aws_security_group" "instance_ssh_access" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
-  tags = "${var.common_tags}"
+  tags = var.common_tags
 }
