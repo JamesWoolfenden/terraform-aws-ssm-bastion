@@ -10,7 +10,7 @@ It's 100% Open Source and licensed under the [APACHE2](LICENSE).
 
 ## Introduction
 
-For bastions, store ssh key in SSM
+For bastions, store ssh key in SSM.
 
 ## Usage
 
@@ -18,8 +18,16 @@ Include this repository as a module in your existing terraform code:
 
 ```hcl
 module "ssm-bastion" {
-  source     = "JamesWoolfenden/ssm-bastion/aws"
-  verison="0.1.1"
+  source            = "JamesWoolfenden/ssm-bastion/aws"
+  verison           ="0.1.1"
+  allowed_ips       = "${chomp(data.http.myip.body)}"
+  common_tags       = var.common_tags
+  vpc_id            = "${element(data.aws_vpcs.vpc.ids, 0)}"
+  instance_type     = var.instance_type
+  ssm_standard_role = var.ssm_standard_role
+  subnet_id         = "${element(data.aws_subnet_ids.subnets.ids, 0)}"
+  environment       = var.environment
+  name              = var.name
 }
 ```
 
