@@ -10,10 +10,34 @@ It's 100% Open Source and licensed under the [APACHE2](LICENSE).
 
 ## Introduction
 
-Some text here
+For bastions, store ssh key in SSM
 
 ## Usage
 
+Include this repository as a module in your existing terraform code:
+
+```hcl
+module "ssm-bastion" {
+  source     = "JamesWoolfenden/ssm-bastion/aws"
+  verison="0.1.1"
+}
+```
+
+<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+## Inputs
+
+| Name | Description | Type | Default | Required |
+|------|-------------|:----:|:-----:|:-----:|
+| allowed\_ips |  | string | n/a | yes |
+| common\_tags | Implements the common tags scheme | map | n/a | yes |
+| environment | The environment name | string | n/a | yes |
+| instance\_type |  | string | n/a | yes |
+| name | Name of the ec2 instance | string | n/a | yes |
+| ssm\_standard\_role |  | string | n/a | yes |
+| subnet\_id |  | string | n/a | yes |
+| vpc\_id |  | string | n/a | yes |
+
+<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Help
 
 **Got a question?**
