@@ -1,8 +1,6 @@
 [![Slalom][logo]](https://slalom.com)
 
-# terraform-ssm-bastion [![Build Status](https://travis-ci.com/JamesWoolfenden/terraform-ssm-bastion.svg?branch=master)](https://travis-ci.com/JamesWoolfenden/terraform-ssm-bastion) [![Latest Release](https://img.shields.io/github/release/JamesWoolfenden/terraform-aws-ssm-bastion.svg)](https://github.com/JamesWoolfenden/terraform-ssm-bastion/releases/latest)
-
-terraform-ssm-bastion...
+# terraform-aws-ssm-bastion [![Build Status](https://travis-ci.com/JamesWoolfenden/terraform-aws-ssm-bastion.svg?branch=master)](https://travis-ci.com/JamesWoolfenden/terraform-aws-ssm-bastion) [![Latest Release](https://img.shields.io/github/release/JamesWoolfenden/terraform-aws-ssm-bastion.svg)](https://github.com/JamesWoolfenden/terraform-aws-ssm-bastion/releases/latest)
 
 ---
 
@@ -19,7 +17,7 @@ Include this repository as a module in your existing terraform code:
 ```hcl
 module "ssm-bastion" {
   source            = "JamesWoolfenden/ssm-bastion/aws"
-  version           = "0.1.1"
+  version           = "0.1.11"
   allowed_ips       = chomp(data.http.myip.body)
   common_tags       = var.common_tags
   vpc_id            = element(data.aws_vpcs.vpc.ids, 0)
