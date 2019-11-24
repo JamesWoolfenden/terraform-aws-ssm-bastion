@@ -1,6 +1,6 @@
 [![Slalom][logo]](https://slalom.com)
 
-# terraform-ssm-bastion [![Build Status](https://travis-ci.com/JamesWoolfenden/terraform-ssm-bastion.svg?branch=master)](https://travis-ci.com/JamesWoolfenden/terraform-ssm-bastion) [![Latest Release](https://img.shields.io/github/release/JamesWoolfenden/terraform-ssm-bastion.svg)](https://github.com/JamesWoolfenden/terraform-ssm-bastion/releases/latest)
+# terraform-ssm-bastion [![Build Status](https://travis-ci.com/JamesWoolfenden/terraform-ssm-bastion.svg?branch=master)](https://travis-ci.com/JamesWoolfenden/terraform-ssm-bastion) [![Latest Release](https://img.shields.io/github/release/JamesWoolfenden/terraform-aws-ssm-bastion.svg)](https://github.com/JamesWoolfenden/terraform-ssm-bastion/releases/latest)
 
 terraform-ssm-bastion...
 
