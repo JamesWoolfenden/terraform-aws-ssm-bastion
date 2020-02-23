@@ -7,5 +7,9 @@ resource "aws_instance" "bastion" {
   key_name                    = aws_key_pair.ssm_key.key_name
   subnet_id                   = var.subnet_id
 
+  root_block_device {
+    encrypted = var.encrypted
+  }
+
   tags = var.common_tags
 }

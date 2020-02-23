@@ -37,3 +37,8 @@ variable "name" {
   type        = string
   description = "Name of the ec2 instance"
 }
+
+variable "encrypted" {
+  type    = bool
+  default = true
+}
