@@ -2,7 +2,7 @@
 
 # terraform-aws-ssm-bastion
 
-[![Build Status](https://travis-ci.com/JamesWoolfenden/terraform-aws-ssm-bastion.svg?branch=master)](https://travis-ci.com/JamesWoolfenden/terraform-aws-ssm-bastion)
+[![Build Status](https://github.com/JamesWoolfenden/terraform-aws-ssm-bastion/workflows/Verify%20and%20Bump/badge.svg?branch=master)](https://github.com/JamesWoolfenden/terraform-aws-ssm-bastion)
 [![Latest Release](https://img.shields.io/github/release/JamesWoolfenden/terraform-aws-ssm-bastion.svg)](https://github.com/JamesWoolfenden/terraform-aws-ssm-bastion/releases/latest)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 [![pre-commit](https://img.shields.io/badge/checkov-verified-brightgreen)](https://www.checkov.io/)
@@ -36,7 +36,8 @@ module "ssm-bastion" {
 }
 ```
 
-<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+
 ## Providers
 
 | Name | Version |
