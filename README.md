@@ -2,7 +2,7 @@
 
 # terraform-aws-ssm-bastion
 
-[![Build Status](https://travis-ci.com/JamesWoolfenden/terraform-aws-ssm-bastion.svg?branch=master)](https://travis-ci.com/JamesWoolfenden/terraform-aws-ssm-bastion)
+[![Build Status](https://github.com/JamesWoolfenden/terraform-aws-ssm-bastion/workflows/Verify%20and%20Bump/badge.svg?branch=master)](https://github.com/JamesWoolfenden/terraform-aws-ssm-bastion)
 [![Latest Release](https://img.shields.io/github/release/JamesWoolfenden/terraform-aws-ssm-bastion.svg)](https://github.com/JamesWoolfenden/terraform-aws-ssm-bastion/releases/latest)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 [![pre-commit](https://img.shields.io/badge/checkov-verified-brightgreen)](https://www.checkov.io/)
@@ -36,36 +36,8 @@ module "ssm-bastion" {
 }
 ```
 
-<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
-## Providers
-
-| Name | Version |
-|------|---------|
-| aws | n/a |
-| local | n/a |
-| tls | n/a |
-
-## Inputs
-
-| Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:-----:|
-| allowed\_ips | n/a | `string` | n/a | yes |
-| common\_tags | Implements the common tags scheme | `map` | n/a | yes |
-| encrypted | n/a | `bool` | `true` | no |
-| environment | The environment name | `string` | n/a | yes |
-| instance\_type | n/a | `string` | n/a | yes |
-| name | Name of the ec2 instance | `string` | n/a | yes |
-| ssm\_standard\_role | n/a | `string` | n/a | yes |
-| subnet\_id | n/a | `string` | n/a | yes |
-| vpc\_id | n/a | `string` | n/a | yes |
-
-## Outputs
-
-| Name | Description |
-|------|-------------|
-| bastion | n/a |
-| client\_public\_ip | Bastion public IP |
-
+<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+Error: no lines in file
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Help
 
@@ -114,9 +86,9 @@ under the License.
 [jameswoolfenden_avatar]: https://github.com/jameswoolfenden.png?size=150
 [logo]: https://gist.githubusercontent.com/JamesWoolfenden/5c457434351e9fe732ca22b78fdd7d5e/raw/15933294ae2b00f5dba6557d2be88f4b4da21201/slalom-logo.png
 [website]: https://slalom.com
-[github]: https://github.com/jameswoolfenden
+[linkedin]: https://www.linkedin.com/in/jameswoolfenden/
 [linkedin]: https://www.linkedin.com/company/slalom-consulting/
-[twitter]: https://twitter.com/Slalom
+[twitter]: https://twitter.com/JimWoolfenden
 
 [share_twitter]: https://twitter.com/intent/tweet/?text=Build+Harness&url=https://github.com/JamesWoolfenden/terraform-ssm-bastion
 [share_linkedin]: https://www.linkedin.com/shareArticle?mini=true&title=Build+Harness&url=https://github.com/JamesWoolfenden/terraform-ssm-bastion
