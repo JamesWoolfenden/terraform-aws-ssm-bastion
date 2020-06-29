@@ -37,7 +37,36 @@ module "ssm-bastion" {
 ```
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
-Error: no lines in file
+
+## Providers
+
+| Name | Version |
+|------|---------|
+| aws | n/a |
+| local | n/a |
+| tls | n/a |
+
+## Inputs
+
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:-----:|
+| allowed\_ips | n/a | `string` | n/a | yes |
+| common\_tags | Implements the common tags scheme | `map` | n/a | yes |
+| encrypted | n/a | `bool` | `true` | no |
+| environment | The environment name | `string` | n/a | yes |
+| instance\_type | n/a | `string` | n/a | yes |
+| name | Name of the ec2 instance | `string` | n/a | yes |
+| ssm\_standard\_role | n/a | `string` | n/a | yes |
+| subnet\_id | n/a | `string` | n/a | yes |
+| vpc\_id | n/a | `string` | n/a | yes |
+
+## Outputs
+
+| Name | Description |
+|------|-------------|
+| bastion | n/a |
+| client\_public\_ip | Bastion public IP |
+
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Help
 
@@ -87,8 +116,8 @@ under the License.
 [logo]: https://gist.githubusercontent.com/JamesWoolfenden/5c457434351e9fe732ca22b78fdd7d5e/raw/15933294ae2b00f5dba6557d2be88f4b4da21201/slalom-logo.png
 [website]: https://slalom.com
 [linkedin]: https://www.linkedin.com/in/jameswoolfenden/
-[linkedin]: https://www.linkedin.com/company/slalom-consulting/
 [twitter]: https://twitter.com/JimWoolfenden
+[github]: https://github.com/jameswoolfenden
 
 [share_twitter]: https://twitter.com/intent/tweet/?text=Build+Harness&url=https://github.com/JamesWoolfenden/terraform-ssm-bastion
 [share_linkedin]: https://www.linkedin.com/shareArticle?mini=true&title=Build+Harness&url=https://github.com/JamesWoolfenden/terraform-ssm-bastion
