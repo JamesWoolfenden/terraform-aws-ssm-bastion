@@ -19,7 +19,7 @@ variable "subnet_id" {
 }
 
 variable "allowed_cidrs" {
-  type = string
+  type = list
 
 }
 
