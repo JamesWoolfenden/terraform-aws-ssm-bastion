@@ -1,5 +1,5 @@
 resource "aws_key_pair" "ssm_key" {
-  key_name   = "ssm-key"
+  key_name   = "${var.name}-ssm-key"
   public_key = tls_private_key.ssh.public_key_openssh
 }
 

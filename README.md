@@ -55,7 +55,7 @@ module "ssm-bastion" {
 | encrypted | n/a | `bool` | `true` | no |
 | environment | The environment name | `string` | n/a | yes |
 | instance\_type | n/a | `string` | n/a | yes |
-| name | Name of the ec2 instance | `string` | n/a | yes |
+| name | Name of the bastion host | `string` | n/a | yes |
 | ssm\_standard\_role | n/a | `string` | n/a | yes |
 | subnet\_id | n/a | `string` | n/a | yes |
 | vpc\_id | n/a | `string` | n/a | yes |
