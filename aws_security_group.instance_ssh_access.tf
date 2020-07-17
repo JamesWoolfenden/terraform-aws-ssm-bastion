@@ -8,7 +8,7 @@ resource "aws_security_group" "instance_ssh_access" {
     to_port     = 22
     protocol    = "TCP"
     self        = true
-    cidr_blocks = ["${var.allowed_ips}/32"]
+    cidr_blocks = var.allowed_cidrs
   }
 
   egress {
