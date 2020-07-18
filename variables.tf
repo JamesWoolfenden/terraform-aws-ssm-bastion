@@ -35,7 +35,7 @@ variable "environment" {
 
 variable "name" {
   type        = string
-  description = "Name of the ec2 instance"
+  description = "Name of the bastion host"
 }
 
 variable "encrypted" {
