@@ -25,7 +25,7 @@ Include this repository as a module in your existing terraform code:
 module "ssm-bastion" {
   source            = "JamesWoolfenden/ssm-bastion/aws"
   version           = "0.1.11"
-  allowed_ips       = chomp(data.http.myip.body)
+  allowed_cidrs     = [ "${chomp(data.http.myip.body)}/32" ]
   common_tags       = var.common_tags
   vpc_id            = element(data.aws_vpcs.vpc.ids, 0)
   instance_type     = var.instance_type

@@ -18,8 +18,8 @@ variable "subnet_id" {
 
 }
 
-variable "allowed_ips" {
-  type = string
+variable "allowed_cidrs" {
+  type = list
 
 }
 
