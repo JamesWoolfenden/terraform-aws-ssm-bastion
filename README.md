@@ -15,7 +15,7 @@ It's 100% Open Source and licensed under the [APACHE2](LICENSE).
 
 ## Introduction
 
-For Bastions, store ssh key in SSM.
+For Bastions, store SSH key in SSM.
 
 ## Usage
 
@@ -37,36 +37,7 @@ module "ssm-bastion" {
 ```
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
-
-## Providers
-
-| Name | Version |
-|------|---------|
-| aws | n/a |
-| local | n/a |
-| tls | n/a |
-
-## Inputs
-
-| Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:-----:|
-| allowed\_ips | n/a | `string` | n/a | yes |
-| common\_tags | Implements the common tags scheme | `map` | n/a | yes |
-| encrypted | n/a | `bool` | `true` | no |
-| environment | The environment name | `string` | n/a | yes |
-| instance\_type | n/a | `string` | n/a | yes |
-| name | Name of the bastion host | `string` | n/a | yes |
-| ssm\_standard\_role | n/a | `string` | n/a | yes |
-| subnet\_id | n/a | `string` | n/a | yes |
-| vpc\_id | n/a | `string` | n/a | yes |
-
-## Outputs
-
-| Name | Description |
-|------|-------------|
-| bastion | n/a |
-| client\_public\_ip | Bastion public IP |
-
+Error: no lines in file
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Help
 
@@ -109,10 +80,15 @@ under the License.
 
 ### Contributors
 
-[![James Woolfenden][jameswoolfenden_avatar]][jameswoolfenden_homepage]<br/>[James Woolfenden][jameswoolfenden_homepage]
+[![James Woolfenden][jameswoolfenden_avatar]][jameswoolfenden_homepage]<br/>[James Woolfenden][jameswoolfenden_homepage]<br/>
+![Jukka Keski-Luopa][keskiju_avatar]<br/>[Jukka Keski-Luopa][keskiju_homepage]<br/>
 
 [jameswoolfenden_homepage]: https://github.com/jameswoolfenden
 [jameswoolfenden_avatar]: https://github.com/jameswoolfenden.png?size=150
+
+[keskiju_homepage]: https://github.com/keskiju
+[keskiju_avatar]: https://github.com/keskiju.png?size=150
+
 [logo]: https://gist.githubusercontent.com/JamesWoolfenden/5c457434351e9fe732ca22b78fdd7d5e/raw/15933294ae2b00f5dba6557d2be88f4b4da21201/slalom-logo.png
 [website]: https://slalom.com
 [linkedin]: https://www.linkedin.com/in/jameswoolfenden/
