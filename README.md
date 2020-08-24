@@ -5,7 +5,7 @@
 [![Build Status](https://github.com/JamesWoolfenden/terraform-aws-ssm-bastion/workflows/Verify%20and%20Bump/badge.svg?branch=master)](https://github.com/JamesWoolfenden/terraform-aws-ssm-bastion)
 [![Latest Release](https://img.shields.io/github/release/JamesWoolfenden/terraform-aws-ssm-bastion.svg)](https://github.com/JamesWoolfenden/terraform-aws-ssm-bastion/releases/latest)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
-[![pre-commit](https://img.shields.io/badge/checkov-verified-brightgreen)](https://www.checkov.io/)
+[![checkov](https://img.shields.io/badge/checkov-verified-brightgreen)](https://www.checkov.io/)
 
 Terraform module to provision an Bastion host.
 
@@ -37,7 +37,39 @@ module "ssm-bastion" {
 ```
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
-Error: no lines in file
+## Requirements
+
+No requirements.
+
+## Providers
+
+| Name | Version |
+|------|---------|
+| aws | n/a |
+| local | n/a |
+| tls | n/a |
+
+## Inputs
+
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| allowed\_cidrs | n/a | `list` | n/a | yes |
+| common\_tags | Implements the common tags scheme | `map` | n/a | yes |
+| encrypted | n/a | `bool` | `true` | no |
+| environment | The environment name | `string` | n/a | yes |
+| instance\_type | n/a | `string` | n/a | yes |
+| name | Name of the bastion host | `string` | n/a | yes |
+| ssm\_standard\_role | n/a | `string` | n/a | yes |
+| subnet\_id | n/a | `string` | n/a | yes |
+| vpc\_id | n/a | `string` | n/a | yes |
+
+## Outputs
+
+| Name | Description |
+|------|-------------|
+| bastion | n/a |
+| client\_public\_ip | Bastion public IP |
+
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Help
 

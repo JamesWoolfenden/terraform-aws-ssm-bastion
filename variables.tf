@@ -1,6 +1,9 @@
 variable "vpc_id" {
   type = string
-
+  validation {
+    condition     = length(var.vpc_id) >= 12 && substr(var.vpc_id, 0, 4) == "vpc-"
+    error_message = "The AMI ids need to start with ami- and is at least 12 characters."
+  }
 }
 
 variable "instance_type" {
@@ -15,12 +18,14 @@ variable "ssm_standard_role" {
 
 variable "subnet_id" {
   type = string
-
+  validation {
+    condition     = length(var.subnet_id) >= 15 && substr(var.subnet_id, 0, 7) == "subnet-"
+    error_message = "The AMI ids need to start with subnet- and is 15 characters or more."
+  }
 }
 
 variable "allowed_cidrs" {
   type = list
-
 }
 
 variable "common_tags" {
