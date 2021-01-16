@@ -1,4 +1,5 @@
 resource "aws_instance" "bastion" {
+  #checkov:skip= CKV_AWS_88: "EC2 instance should not have public IP."
   ami                         = data.aws_ami.ubuntu.image_id
   iam_instance_profile        = aws_iam_instance_profile.bastion.name
   instance_type               = var.instance_type
@@ -9,6 +10,10 @@ resource "aws_instance" "bastion" {
 
   root_block_device {
     encrypted = var.encrypted
+  }
+
+  metadata_options {
+    http_tokens = "required"
   }
 
   tags = var.common_tags
