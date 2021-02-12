@@ -1,4 +1,4 @@
-output client_public_ip {
+output "client_public_ip" {
   description = "Bastion public IP"
   value       = aws_instance.bastion.public_ip
 }

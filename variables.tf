@@ -25,11 +25,11 @@ variable "subnet_id" {
 }
 
 variable "allowed_cidrs" {
-  type = list
+  type = list(any)
 }
 
 variable "common_tags" {
-  type        = map
+  type        = map(any)
   description = "Implements the common tags scheme"
 }
 

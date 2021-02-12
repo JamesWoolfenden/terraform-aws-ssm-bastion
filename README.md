@@ -55,8 +55,8 @@ No requirements.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| allowed\_cidrs | n/a | `list` | n/a | yes |
-| common\_tags | Implements the common tags scheme | `map` | n/a | yes |
+| allowed\_cidrs | n/a | `list(any)` | n/a | yes |
+| common\_tags | Implements the common tags scheme | `map(any)` | n/a | yes |
 | encrypted | n/a | `bool` | `true` | no |
 | environment | The environment name | `string` | n/a | yes |
 | instance\_type | n/a | `string` | n/a | yes |
