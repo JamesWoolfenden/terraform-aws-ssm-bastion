@@ -60,6 +60,12 @@ compare:
 	docker pull checkmarx/kics:latest
 	docker run -v $(CURDIR):/path -v $(CURDIR)/../../output:/output checkmarx/kics:latest -p "/path" -o "/output/kics.json"
 
+conftest: plan convert
+	conftest test ./tfplan.json -p ../../policies
+
+opa: plan convert
+	opa eval --format pretty --data terraform.rego --input tfplan.json "data.terraform.analysis.authz"
+
 target:
 	@read -p "Enter Module to target:" MODULE;
 	terraform apply -target $$MODULE
