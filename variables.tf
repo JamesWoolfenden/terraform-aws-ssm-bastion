@@ -42,8 +42,3 @@ variable "name" {
   type        = string
   description = "Name of the bastion host"
 }
-
-variable "encrypted" {
-  type    = bool
-  default = true
-}
