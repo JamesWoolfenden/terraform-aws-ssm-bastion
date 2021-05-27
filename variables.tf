@@ -28,10 +28,6 @@ variable "allowed_cidrs" {
   type = list(any)
 }
 
-variable "common_tags" {
-  type        = map(any)
-  description = "Implements the common tags scheme"
-}
 
 variable "environment" {
   type        = string

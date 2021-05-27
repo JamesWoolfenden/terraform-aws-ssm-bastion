@@ -3,11 +3,6 @@ variable "name" {
   description = "The name of the bastion server"
 }
 
-variable "common_tags" {
-  type        = map(any)
-  description = "Implements the common tags scheme"
-}
-
 variable "environment" {
   default = "dev"
 }
@@ -17,5 +12,9 @@ variable "instance_type" {
 }
 
 variable "ssm_standard_role" {
+  type = string
+}
+
+variable "account_name" {
   type = string
 }

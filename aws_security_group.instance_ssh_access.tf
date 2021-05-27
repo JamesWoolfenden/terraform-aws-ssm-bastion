@@ -18,6 +18,4 @@ resource "aws_security_group" "instance_ssh_access" {
     # tfsec:ignore:AWS009
     cidr_blocks = ["0.0.0.0/0"]
   }
-
-  tags = var.common_tags
 }

@@ -28,7 +28,6 @@ module "ssm-bastion" {
   source            = "JamesWoolfenden/ssm-bastion/aws"
   version           = "0.1.11"
   allowed_cidrs     = [ "${chomp(data.http.myip.body)}/32" ]
-  common_tags       = var.common_tags
   vpc_id            = element(data.aws_vpcs.vpc.ids, 0)
   instance_type     = var.instance_type
   ssm_standard_role = var.ssm_standard_role
@@ -76,7 +75,6 @@ No modules.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_allowed_cidrs"></a> [allowed\_cidrs](#input\_allowed\_cidrs) | n/a | `list(any)` | n/a | yes |
-| <a name="input_common_tags"></a> [common\_tags](#input\_common\_tags) | Implements the common tags scheme | `map(any)` | n/a | yes |
 | <a name="input_environment"></a> [environment](#input\_environment) | The environment name | `string` | n/a | yes |
 | <a name="input_instance_type"></a> [instance\_type](#input\_instance\_type) | n/a | `string` | n/a | yes |
 | <a name="input_name"></a> [name](#input\_name) | Name of the bastion host | `string` | n/a | yes |

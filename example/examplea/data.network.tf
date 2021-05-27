@@ -1,18 +1,41 @@
 data "aws_vpcs" "vpc" {
-  tags = {
-    Environment = "Dev/Test"
-    Name        = "awwe-vpc-devtest-h-001"
+  filter {
+    name   = "tag:Name"
+    values = [upper(var.account_name)]
   }
 }
 
-data "aws_subnet_ids" "subnets" {
-  tags = {
-    Name = "awwe-subn-devtest-h-web-001-1b"
-  }
-
-  vpc_id = element(data.aws_vpcs.vpc.ids, 0)
+locals {
+  vpc_id = tolist(data.aws_vpcs.vpc.ids)[0]
 }
 
-data "http" "myip" {
-  url = "http://ipv4.icanhazip.com"
+
+data "aws_vpc" "vpc" {
+  id = local.vpc_id
+}
+
+data "aws_subnet_ids" "private" {
+  vpc_id = local.vpc_id
+
+  tags = {
+    Type = "Private"
+  }
+}
+
+data "aws_subnet_ids" "public" {
+  vpc_id = local.vpc_id
+
+  tags = {
+    Type = "Public"
+  }
+}
+
+data "aws_subnet" "public" {
+  count = length(tolist(data.aws_subnet_ids.public.ids))
+  id    = tolist(data.aws_subnet_ids.public.ids)[count.index]
+}
+
+data "aws_subnet" "private" {
+  count = length(tolist(data.aws_subnet_ids.private.ids))
+  id    = tolist(data.aws_subnet_ids.private.ids)[count.index]
 }
