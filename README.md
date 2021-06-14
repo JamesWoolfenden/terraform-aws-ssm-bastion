@@ -37,6 +37,24 @@ module "ssm-bastion" {
 }
 ```
 
+## Cost
+
+```text
+Monthly cost estimate
+
+Project: JamesWoolfenden/terraform-aws-ssm-bastion/example/examplea
+
+ Name                                                Monthly Qty  Unit     Monthly Cost
+
+ module.bastion.aws_instance.bastion
+ ├─ Instance usage (Linux/UNIX, reserved, t2.micro)          730  hours           $0.00
+ ├─ EC2 detailed monitoring                                    7  metrics         $2.10
+ └─ root_block_device
+    └─ Storage (general purpose SSD, gp2)                      8  GB              $0.93
+
+ OVERALL TOTAL                                                                    $3.03
+```
+
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
 
