@@ -56,17 +56,18 @@ Project: JamesWoolfenden/terraform-aws-ssm-bastion/example/examplea
 ```
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+
 ## Requirements
 
 No requirements.
 
 ## Providers
 
-| Name | Version |
-|------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | n/a |
-| <a name="provider_local"></a> [local](#provider\_local) | n/a |
-| <a name="provider_tls"></a> [tls](#provider\_tls) | n/a |
+| Name                                                   | Version |
+| ------------------------------------------------------ | ------- |
+| <a name="provider_aws"></a> [aws](#provider_aws)       | n/a     |
+| <a name="provider_local"></a> [local](#provider_local) | n/a     |
+| <a name="provider_tls"></a> [tls](#provider_tls)       | n/a     |
 
 ## Modules
 
@@ -74,38 +75,39 @@ No modules.
 
 ## Resources
 
-| Name | Type |
-|------|------|
-| [aws_iam_instance_profile.bastion](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_instance_profile) | resource |
-| [aws_iam_role.ssm_role](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role) | resource |
-| [aws_iam_role_policy_attachment.ssm_standard](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role_policy_attachment) | resource |
-| [aws_instance.bastion](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance) | resource |
-| [aws_key_pair.ssm_key](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/key_pair) | resource |
-| [aws_security_group.instance_ssh_access](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/security_group) | resource |
-| [local_file.private_ssh](https://registry.terraform.io/providers/hashicorp/local/latest/docs/resources/file) | resource |
-| [local_file.public_ssh](https://registry.terraform.io/providers/hashicorp/local/latest/docs/resources/file) | resource |
-| [tls_private_key.ssh](https://registry.terraform.io/providers/hashicorp/tls/latest/docs/resources/private_key) | resource |
-| [aws_ami.ubuntu](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/ami) | data source |
-| [aws_iam_policy_document.assume](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/iam_policy_document) | data source |
+| Name                                                                                                                                                  | Type        |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| [aws_iam_instance_profile.bastion](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_instance_profile)                  | resource    |
+| [aws_iam_role.ssm_role](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role)                                         | resource    |
+| [aws_iam_role_policy_attachment.ssm_standard](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role_policy_attachment) | resource    |
+| [aws_instance.bastion](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance)                                          | resource    |
+| [aws_key_pair.ssm_key](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/key_pair)                                          | resource    |
+| [aws_security_group.instance_ssh_access](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/security_group)                  | resource    |
+| [local_file.private_ssh](https://registry.terraform.io/providers/hashicorp/local/latest/docs/resources/file)                                          | resource    |
+| [local_file.public_ssh](https://registry.terraform.io/providers/hashicorp/local/latest/docs/resources/file)                                           | resource    |
+| [tls_private_key.ssh](https://registry.terraform.io/providers/hashicorp/tls/latest/docs/resources/private_key)                                        | resource    |
+| [aws_ami.ubuntu](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/ami)                                                  | data source |
+| [aws_iam_policy_document.assume](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/iam_policy_document)                  | data source |
 
 ## Inputs
 
-| Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
-| <a name="input_allowed_cidrs"></a> [allowed\_cidrs](#input\_allowed\_cidrs) | n/a | `list(any)` | n/a | yes |
-| <a name="input_environment"></a> [environment](#input\_environment) | The environment name | `string` | n/a | yes |
-| <a name="input_instance_type"></a> [instance\_type](#input\_instance\_type) | n/a | `string` | n/a | yes |
-| <a name="input_name"></a> [name](#input\_name) | Name of the bastion host | `string` | n/a | yes |
-| <a name="input_ssm_standard_role"></a> [ssm\_standard\_role](#input\_ssm\_standard\_role) | n/a | `string` | n/a | yes |
-| <a name="input_subnet_id"></a> [subnet\_id](#input\_subnet\_id) | n/a | `string` | n/a | yes |
-| <a name="input_vpc_id"></a> [vpc\_id](#input\_vpc\_id) | n/a | `string` | n/a | yes |
+| Name                                                                                 | Description              | Type        | Default | Required |
+| ------------------------------------------------------------------------------------ | ------------------------ | ----------- | ------- | :------: |
+| <a name="input_allowed_cidrs"></a> [allowed_cidrs](#input_allowed_cidrs)             | n/a                      | `list(any)` | n/a     |   yes    |
+| <a name="input_environment"></a> [environment](#input_environment)                   | The environment name     | `string`    | n/a     |   yes    |
+| <a name="input_instance_type"></a> [instance_type](#input_instance_type)             | n/a                      | `string`    | n/a     |   yes    |
+| <a name="input_name"></a> [name](#input_name)                                        | Name of the bastion host | `string`    | n/a     |   yes    |
+| <a name="input_ssm_standard_role"></a> [ssm_standard_role](#input_ssm_standard_role) | n/a                      | `string`    | n/a     |   yes    |
+| <a name="input_subnet_id"></a> [subnet_id](#input_subnet_id)                         | n/a                      | `string`    | n/a     |   yes    |
+| <a name="input_vpc_id"></a> [vpc_id](#input_vpc_id)                                  | n/a                      | `string`    | n/a     |   yes    |
 
 ## Outputs
 
-| Name | Description |
-|------|-------------|
-| <a name="output_bastion"></a> [bastion](#output\_bastion) | n/a |
-| <a name="output_client_public_ip"></a> [client\_public\_ip](#output\_client\_public\_ip) | Bastion public IP |
+| Name                                                                                | Description       |
+| ----------------------------------------------------------------------------------- | ----------------- |
+| <a name="output_bastion"></a> [bastion](#output_bastion)                            | n/a               |
+| <a name="output_client_public_ip"></a> [client_public_ip](#output_client_public_ip) | Bastion public IP |
+
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 ## Help
@@ -122,7 +124,7 @@ Please use the [issue tracker](https://github.com/JamesWoolfenden/terraform-ssm-
 
 ## Copyrights
 
-Copyright © 2019-2021 James Woolfenden
+Copyright © 2019-2022 James Woolfenden
 
 ## License
 
