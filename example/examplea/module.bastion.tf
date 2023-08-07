@@ -11,5 +11,5 @@ module "bastion" {
 
 
 module "myip" {
-  source  = "git::https://github.com/JamesWoolfenden/terraform-http-ip?ref=aca5d04513698f2f564913cfcc3534780794c800"
+  source = "git::https://github.com/JamesWoolfenden/terraform-http-ip?ref=aca5d04513698f2f564913cfcc3534780794c800"
 }
