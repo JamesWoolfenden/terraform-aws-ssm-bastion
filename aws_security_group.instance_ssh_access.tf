@@ -1,5 +1,6 @@
 # Instance Security group
 resource "aws_security_group" "instance_ssh_access" {
+  # checkov:skip=CKV_AWS_382: Unrestricted outbound access required for resource functionality
   description = "Allow SSH to instance with ssm agent"
   vpc_id      = var.vpc_id
 
