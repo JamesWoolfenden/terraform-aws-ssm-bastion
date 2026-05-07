@@ -18,7 +18,6 @@ resource "aws_security_group" "instance_ssh_access" {
     from_port   = 0
     to_port     = 0
     protocol    = "-1"
-    # tfsec:ignore:AWS009
     cidr_blocks = ["0.0.0.0/0"]
   }
 }
